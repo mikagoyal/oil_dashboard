@@ -8,6 +8,9 @@ from bs4 import BeautifulSoup
 import gc
 import re # For regex-based cleaning
 
+import nltk
+nltk.data.path.append("./nltk_data")
+
 # --- Extractive Summarization Imports ---
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
