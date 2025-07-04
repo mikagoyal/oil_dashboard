@@ -1,5 +1,3 @@
-import json
-import os
 import streamlit as st
 import asyncio
 import aiohttp
@@ -21,9 +19,6 @@ from sumy.utils import get_stop_words
 # Make sure to install: pip install firebase-admin
 import firebase_admin
 from firebase_admin import credentials, firestore, exceptions, auth # Import auth service
-
-# ----- streamlit-modal -----
-from streamlit_modal import Modal
 
 # --- Configure Logging ---
 import logging
@@ -434,14 +429,6 @@ RSS_FEED_URLS = [
     "https://www.oedigital.com/energy/oil?format=feed&limitstart=&type=rss",
     "https://oilandgas-investments.com/feed/",
     "https://www.industrialinfo.com/rss/news/mostRecent.jsp?cat=INDUSTRY;REFINING",
-    "https://oilandgas.einnews.com/rss/WonKRejMQTYG4vVo",
-    "https://oilandgas.einnews.com/rss/bxpwzytIaeIOaMf9",
-    "https://oilandgas.einnews.com/rss/kbmIfWGQ7dLXzvLp",
-    "https://oilandgas.einnews.com/rss/XUgdd7-lzPShYpxP",
-    "https://oilandgas.einnews.com/rss/bv-G3ST_Z6QH_1nQ",
-    "https://oilandgas.einnews.com/rss/Qx8xTAcBiuzoaksD",
-    "https://oilandgas.einnews.com/rss/WYtS7V-qjR_6yiYp",
-    "https://oilandgas.einnews.com/rss/J2xfAgPGc88EjD_8",
     "https://www.oilfutures.co.uk/feeds/posts/default",
 
 ]
