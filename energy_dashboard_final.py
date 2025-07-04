@@ -1742,7 +1742,7 @@ def main():
         if 'selected_sources' not in st.session_state:
             st.session_state.selected_sources = []
 
-        col1, col2 = st.columns([0.8, 0.2])
+        col1, col2 = st.columns([0.85, 0.15])
 
         with col1:
             st.markdown("### Latest News")
