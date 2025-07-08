@@ -1600,6 +1600,12 @@ def main():
             st.session_state.current_theme = "light" if st.session_state.current_theme == "dark" else "dark"
             st.rerun()
 
+        # Refresh Button
+        if st.sidebar.button("Refresh News"):
+            st.cache_data.clear()
+            st.session_state.fetch_trigger += 1
+            st.rerun()
+
         selected_filters_icon = filters_dark if st.session_state.current_theme == "dark" else filters_light
 
         # Authentication Section in Sidebar
@@ -1700,12 +1706,6 @@ def main():
         st.session_state.current_stream_filters = [
             stream for stream, selected in stream_filters.items() if selected
         ]
-
-        # Refresh Button
-        if st.sidebar.button("Refresh News"):
-            st.cache_data.clear()
-            st.session_state.fetch_trigger += 1
-            st.rerun()
 
         # Fetch articles
         articles = get_processed_news_cached()
